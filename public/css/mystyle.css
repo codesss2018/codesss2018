@@ -1,0 +1,100 @@
+
+.btn-li {
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.btn-li {
+	font-size: 13px;
+	padding: 20px 30px;
+	text-transform: uppercase;
+    background-color: #3B3B3B;
+    text-decoration:none;
+}
+.btn-li:hover,.btn-active{
+	background: #FF5454;
+	color: #ffffff;
+    text-decoration:none;
+}
+.log_reg {
+    position: absolute;
+    top: 0px;
+    background: #3b3b3b;
+}
+.log_reg ul li a {
+    font-size: 20px;
+    line-height: 50px;
+    width: 51px;
+    height: 51px;
+}
+@media only screen and (max-width: 320px) {
+	.log_reg ul li a {
+		font-size: 20px;
+		width: 46px;
+	}
+}
+.log_reg{
+
+}
+.log_reg ul{
+	margin-bottom: 0;
+}
+.log_reg ul li{
+	display:inline-block;
+	border-left: 1px solid rgb(39, 37, 37);
+	margin-left: -3px;
+}
+.log_reg ul li a{
+	color:#ffffff;
+	font-size: 24px;
+	display: block;
+	line-height: 60px;
+	/* width: 60px; */
+	/* height: 60px; */
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.log_reg ul li a:hover{
+	background: #FF5454;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff!important;
+    background-color: #3B3B3B!important;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 13px;
+    list-style: none;
+    background-color: #3B3B3B!important;
+    background-clip: padding-box;
+    border-right: 1px solid rgb(39, 37, 37);
+    border-radius: 4px;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 15px 22px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #ffffff;
+    white-space: nowrap;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #FF5454;
+}
