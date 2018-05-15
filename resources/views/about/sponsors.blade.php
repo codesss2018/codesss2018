@@ -1,8 +1,173 @@
 @extends('about/alayout')
 
 @section('asection')
-    <h2>Sponsors</h2>
-    <p class="para">We are <i>codeS</i><br />Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words. </p>
-</div>
+    <p class="para">CODE-S believes that anyone anywhere should have at least some knowledge of computers, how they work and how to program a computer. We provide the platform where people can come and learn about computers and how to apply them in their daily lifes at work, school and for personal use. Computers provide a great tool to improve productivity and taking full advantage of that in our daily lives could make our lives easier. We are a non-profit and therefore supported by philantropic donations from corporations, foundations, and generous individuals.  </p><br/><br/>
+    <a href="" class="btn-li">Please Consider A Donation</a><br/><br/><br/><br/><br/>
+    <h2 class="text-red-text">Daimond Sponsors ( contribution rate )</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+        </div>
+      </div>
+    <br/><br/>
+    <h2 class="text-red-text">Platinum Sponsors ( contribution rate )</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+          </a>
+        </div>
+        </div>
+      </div>
+      <br/><br/>
+      <h2 class="text-red-text">Gold Sponsors ( contribution rate )</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="">
+              <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="">
+              <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="">
+              <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+            </a>
+          </div>
+          </div>
+        </div>
+        <br/><br/>
+        <h2 class="text-red-text">Silver Sponsors ( contribution rate )</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="">
+                <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="">
+                <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="">
+                <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+              </a>
+            </div>
+            </div>
+          </div>
+          <br/><br/>
+          <h2 class="text-red-text">Bronze Sponsors ( contribution rate )</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                </a>
+              </div>
+              </div>
+            </div>
+            <br/><br/>
+            <h2 class="text-red-text">Sponsors ( contribution rate )</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  <a href="">
+                    <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  <a href="">
+                    <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  <a href="">
+                    <img src="{{ asset('images/child-3.jpg') }}" alt="Management" style="width:100%">
+
+                  </a>
+                </div>
+                </div>
+              </div>
 @endsection

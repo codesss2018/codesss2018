@@ -1,8 +1,83 @@
 @extends('about/alayout')
 
 @section('asection')
-    <h2>Our Full Team</h2>
-    <p class="para">We are <i>codeS</i><br />Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words. </p>
-</div>
+    <h2 class="text-red-text">Our Full Team</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+            <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    </div>
+    <br/><br/>
+    <h2 class="text-red-text">Our Extended Team</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-1.jpg') }}" alt="Management" style="width:100%">
+            <div class="caption">
+            <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    </div>
+    <br/><br/>
+    <h2 class="text-red-text">Our Facilitators</h2>
+    <br/><br/>
+    <h2 class="text-red-text">Special Thanks To</h2>
 @endsection

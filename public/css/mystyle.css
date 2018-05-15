@@ -10,11 +10,16 @@
 	font-size: 13px;
 	padding: 20px 30px;
 	text-transform: uppercase;
-    background-color: #3B3B3B;
+    background-color: #3b3b3b;
+	color: #ffffff;
     text-decoration:none;
 }
-.btn-li:hover,.btn-active{
-	background: #FF5454;
+.btn-li:hover {
+	background-color: #FF5454;
+	color: #ffffff;
+    text-decoration:none;
+}
+.btn-li:active {
 	color: #ffffff;
     text-decoration:none;
 }
@@ -97,4 +102,7 @@
     text-decoration: none;
     color: #ffffff;
     background-color: #FF5454;
+}
+.text-red-text {
+	color: #ff5454!important
 }

@@ -2,7 +2,41 @@
 
 @section('asection')
     <h2>Council of Advisors</h2>
-    <p class="para">We are <i>codeS</i><br />Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words. </p>
-</div>
+    <p class="para"> Our Council of Advisors is made of individuals with prestigious holdings in their respective organizations from various sectors of the economy. They advise us on pertinent issues relating to our cause and even the organization as a whole as to how we can improve, sustain and maintain our goals. Since they are professional players in their respective fields, they help us tailor our activities in order to meet professional trends as well as to create output to meet current needs in the actual field of work. In effect they bridge the gap between being a student here and doing actual work out there and make sure we offer a standard input.</p><br/><br/>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-5.webp') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-5.webp') }}" alt="Management" style="width:100%">
+            <div class="caption">
+              <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="">
+            <img src="{{ asset('images/child-5.webp') }}" alt="Management" style="width:100%">
+            <div class="caption">
+            <h4>Name // Title</h4>
+              <p>Lorem ipsum...</p>
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    </div>
 @endsection
