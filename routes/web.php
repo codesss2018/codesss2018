@@ -11,7 +11,6 @@
 |
 */
 echo "<pre>".$_SESSION."</pre>";
-die();
 Route::view('/', 'home',['page'=>'home'])->name('home');
 Route::prefix('/activities')->group(function () {
     $folder = 'activities';
