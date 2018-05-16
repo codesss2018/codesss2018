@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-session_start();
-echo "<pre>".$_SESSION."</pre>";
 Route::view('/', 'home',['page'=>'home'])->name('home');
 Route::prefix('/activities')->group(function () {
     $folder = 'activities';
