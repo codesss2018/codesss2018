@@ -1,4 +1,4 @@
-<div class="header_bg">
+<div class="header_bg1">
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">

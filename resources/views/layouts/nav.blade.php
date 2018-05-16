@@ -41,7 +41,7 @@
 		</nav>
 		<div class="soc_icons navbar-right">
 			<ul class="list-unstyled text-center">
-				<li><a href="#" id= "loginRegister">Login/Register</a></li>
+				<li><a href="#" id= "loginRegister">Sign In/ Sign Up</a></li>
 			</ul>
 		</div>
 	</div>

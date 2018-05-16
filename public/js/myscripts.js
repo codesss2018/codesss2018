@@ -5,7 +5,19 @@ $(document).ready(function () {
         bgincrement : 450
     });
 
-    $("#owl-demo").owlCarousel({
+    $("#owl-demoC").owlCarousel({
+        items : 4,
+        lazyLoad : true,
+        autoPlay : true,
+        navigation : true,
+        navigationText : ["", ""],
+        rewindNav : false,
+        scrollPerPage : false,
+        pagination : false,
+        paginationNumbers : false,
+    });
+
+    $("#owl-demoR").owlCarousel({
         items : 4,
         lazyLoad : true,
         autoPlay : true,
