@@ -23,6 +23,30 @@
 	color: #ffffff;
     text-decoration:none;
 }
+.btn-li-sm {
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.btn-li-sm {
+	font-size: 13px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+    background-color: #3b3b3b;
+	color: #ffffff;
+    text-decoration:none;
+}
+.btn-li-sm:hover {
+	background-color: #FF5454;
+	color: #ffffff;
+    text-decoration:none;
+}
+.btn-li-sm:active {
+	color: #ffffff;
+    text-decoration:none;
+}
 .log_reg {
     position: absolute;
     top: 0px;
@@ -105,4 +129,8 @@
 }
 .text-red-text {
 	color: #ff5454!important
+}
+
+.text-black-text {
+	color: #3b3b3b!important
 }
