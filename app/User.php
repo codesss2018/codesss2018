@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function code_session_trackers(){
+        return $this->hasMany('App\CodeSessionTracker', 'user_id');
+    }
+
+    public function tutorial_trackers(){
+        return $this->hasMany('App\TutorialTracker', 'user_id');
+    }
+
+    public function quiz_trackers(){
+        return $this->hasMany('App\QuizTracker', 'user_id');
+    }
 }

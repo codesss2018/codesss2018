@@ -18,5 +18,5 @@
         Although never is often better than *right* now.
         If the implementation is hard to explain, it's a bad idea.
         </p>
-    <a href="" class="fa-btn btn-1 btn-1e">Learn more about us</a>
+    <a href="{{ url('about') }}" class="fa-btn btn-1 btn-1e">Learn more about us</a>
 </div>
