@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone',
     ];
 
     /**
@@ -37,5 +37,9 @@ class User extends Authenticatable
 
     public function quiz_trackers(){
         return $this->hasMany('App\QuizTracker', 'user_id');
+    }
+
+    public function comments(){
+        return $this->hasMany('App\Comment', 'user_id');
     }
 }

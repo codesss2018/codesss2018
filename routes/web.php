@@ -43,3 +43,31 @@ Route::view('/help', 'help',['page'=>'help'])->name('help');
 Auth::routes();
 
 Route::get('/account', 'HomeController@index')->name('account');
+Route::get('/courses/show','CourseController@show');
+Route::get('/courses/show/all','CourseController@showAll');
+Route::get('/course/show/{courseid}','CourseController@getShow');
+Route::middleware(['auth'])->group(function () {
+    Route::prefix('/account')->group(function () {
+        Route::get('session/{sessid}','CodeSessionController@index');
+        Route::prefix('session/{sessid}')->group(function () {
+            Route::get('courses','CourseController@index');
+            Route::post('course/create','CourseController@create');
+            Route::post('course/edit/{courseid}','CourseController@update');
+            Route::post('course/delete/{courseid}','CourseController@delete');
+            Route::get('course/{courseid}','CourseController@get');
+            Route::get('comments','CommentController@index');
+            Route::prefix('course/{courseid}')->group(function (){
+                Route::get('comment/{commentid}','CommentController@get');
+                Route::post('comment/create','CommentController@create');
+                Route::post('comment/delete/{commentid}','CommentController@delete');
+                Route::get('quiz/{quizid}','QuizController@get');
+                Route::post('quiz/create/{quizid}','QuizController@create');
+                Route::post('quiz/delete/{quizid}','QuizController@delete');
+                Route::get('tutorial/{tutorialid}','TutorialController@get');
+                Route::post('tutorial/create','TutorialController@create');
+                Route::post('tutorial/edit/{tutorialid}','TutorialController@update');
+                Route::post('tutorial/delete/{tutorialid}','TutorialController@delete');
+            });
+        });
+    });
+});

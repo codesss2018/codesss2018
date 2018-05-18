@@ -33,12 +33,7 @@ $(document).ready(function () {
 
     });
     $('#loginRegister').on('click', function(){
-    	cookieValue = getCookie("sessionId");
-    	if (cookieValue!="") {
-
-		}else{
-			$('#myModal88').modal('show');
-		}
+		$('#myModal88').modal('show');
     });
 
     $('#horizontalTab').easyResponsiveTabs({

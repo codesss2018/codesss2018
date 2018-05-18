@@ -19,4 +19,8 @@ class Course extends Model
     public function quizzes(){
         return $this->hasMany('App\Quiz', 'quiz_id');
     }
+
+    public function comments(){
+        return $this->hasMany('App\Comment', 'course_id');
+    }
 }

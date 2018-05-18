@@ -19,11 +19,13 @@
                                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                                     <div class="facts">
                                         <div class="register">
-                                            <form action="#" method="post">
-                                                <input name="Email" placeholder="Email Address" type="text" id="txtEmail" required="">
-                                                <input name="Password" placeholder="Password" type="password" id="txtPassword" required="">
+                                            <form action="/login" method="post">
+                                                {{ $errors }}
+                                                {{ csrf_field() }}
+                                                <input name="email" placeholder="Email Address" type="text" required="">
+                                                <input name="password" placeholder="Password" type="password" required="">
                                                 <div class="sign-up">
-                                                    <input type="submit" value="Sign in" id="login_user"/>
+                                                    <input type="submit" value="Sign in"/>
                                                 </div>
                                             </form>
                                         </div>
@@ -32,14 +34,16 @@
                                 <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
                                     <div class="facts">
                                         <div class="register">
-                                            <form action="#" method="post">
-                                                <input placeholder="Name" id="txtNameRegister" name="Name" type="text" required="">
-                                                <input placeholder="Email Address" id="txtEmailRegister" name="Email" type="email" required="">
-                                                <input placeholder="Phone Number" id="txtPhoneRegister" name="Phone" type="text" required="" style="margin-top:17px;">
-                                                <input placeholder="Password" id="txtPasswordRegister" name="Password" type="password" required="">
-                                                <input placeholder="Confirm Password" id="txtPasswordCRegister" name="Password" type="password" required="">
+                                            <form action="/register" method="post">
+                                                {{ $errors }}
+                                                {{ csrf_field() }}
+                                                <input placeholder="User Name" name="name" type="text" required="">
+                                                <input placeholder="Email Address" name="email" type="email" required="">
+                                                <input placeholder="Phone Number" name="phone" type="text" required="" style="margin-top:17px;">
+                                                <input placeholder="Password" name="password" type="password" required="">
+                                                <input placeholder="Confirm Password" name="password_confirmation" type="password">
                                                 <div class="sign-up">
-                                                    <input type="submit" value="Create Account" id="register_user"/>
+                                                    <input type="submit" value="Create Account"/>
                                                 </div>
                                             </form>
                                         </div>

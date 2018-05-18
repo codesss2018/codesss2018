@@ -8,4 +8,3 @@
 <!-- Owl Carousel Assets -->
 <script type="text/javascript" src="{{ asset('js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/myscripts.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/authenticate.js') }}"></script>
