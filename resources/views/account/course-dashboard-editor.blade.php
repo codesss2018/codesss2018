@@ -1,5 +1,5 @@
 @extends('account/account')
 
 @section('main')
-    @include('account/student-dashboard')
+    @include('account/course-editor')
 @endsection

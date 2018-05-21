@@ -1,4 +1,4 @@
-Includes vendor (3rd party) styling such as the customized Bootstrap and other 3rd party libraries used for the current theme/module -->
+
 <link href="{{ asset('css/vendor.min.css') }}" rel="stylesheet">
 <!-- Compressed Theme BUNDLE
 Note: The bundle includes all the custom styling required for the current theme, however

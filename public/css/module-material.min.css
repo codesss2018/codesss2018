@@ -171,7 +171,7 @@ lang=en');
   width: 0;
   bottom: -1px;
   position: absolute;
-  background: #42a5f5;
+  background: #FF5454;
   transition: all 0.2s ease;
 }
 .form-control-material .ma-form-bar:before {
@@ -200,7 +200,7 @@ lang=en');
 }
 .form-control-material .form-control:focus ~ label,
 .form-control-material .form-control.used ~ label {
-  color: #42a5f5;
+  color: #FF5454;
   font-size: 1rem;
   top: -18px;
 }
@@ -238,7 +238,7 @@ lang=en');
 }
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #42a5f5;
+    background: #FF5454;
   }
   to {
     width: 0;
@@ -247,7 +247,7 @@ lang=en');
 }
 @keyframes inputHighlighter {
   from {
-    background: #42a5f5;
+    background: #FF5454;
   }
   to {
     width: 0;
@@ -331,7 +331,7 @@ lang=en');
 .list-group-menu > .list-group-item:not(.active) > .ripple .ink,
 .dropdown-menu > li > .ripple .ink,
 .navbar-nav > li > .ripple .ink {
-  background: radial-gradient(rgba(66, 165, 245, 0.2) 0, rgba(66, 165, 245, 0.3) 40%, rgba(66, 165, 245, 0.4) 50%, rgba(66, 165, 245, 0.5) 60%, rgba(66, 165, 245, 0) 70%);
+  background: radial-gradient(rgba(255, 54, 54, 0.2) 0, rgba(255, 54, 54, 0.3) 40%, rgba(255, 54, 54, 0.4) 50%, rgba(255, 54, 54, 0.5) 60%, rgba(66, 165, 245, 0) 70%);
 }
 @-webkit-keyframes rippleAnimation {
   /* scale the element to 250% to safely cover the entire link and fade it out */
@@ -382,8 +382,8 @@ lang=en');
 }
 .sidebar.sidebar-skin-material-blue .btn-default {
   color: #ffffff;
-  background-color: #3094e4;
-  border-color: #3094e4;
+  background-color: #FF5454;
+  border-color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .btn-default:hover,
 .sidebar.sidebar-skin-material-blue .btn-default:focus,
@@ -392,8 +392,8 @@ lang=en');
 .sidebar.sidebar-skin-material-blue .btn-default.active,
 .open > .dropdown-toggle.sidebar.sidebar-skin-material-blue .btn-default {
   color: #ffffff;
-  background-color: #1a7ac7;
-  border-color: #1975be;
+  background-color: #FF5454;
+  border-color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .btn-default:active,
 .sidebar.sidebar-skin-material-blue .btn-default.active,
@@ -418,11 +418,11 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default:active,
 .sidebar.sidebar-skin-material-blue .btn-default.disabled.active,
 .sidebar.sidebar-skin-material-blue .btn-default[disabled].active,
 fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
-  background-color: #3094e4;
-  border-color: #3094e4;
+  background-color: #FF5454;
+  border-color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .btn-default .badge {
-  color: #3094e4;
+  color: #FF5454;
   background-color: #ffffff;
 }
 .sidebar.sidebar-skin-material-blue .form-control,
@@ -443,14 +443,14 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   color: #212121;
 }
 .sidebar.sidebar-skin-material-blue .list-group-menu .list-group-item a:hover {
-  color: #42a5f5;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .list-group-menu .list-group-item.active a {
-  color: #2196f3;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .list-group-menu.primary .list-group-item {
-  background: #2196f3;
-  border-color: #2196f3;
+  background: #FF5454;
+  border-color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .list-group-menu.primary .list-group-item a {
   color: #fff;
@@ -459,7 +459,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   color: #fff;
 }
 .sidebar.sidebar-skin-material-blue .list-group-menu.primary .list-group-item.active {
-  background: #1b93f3;
+  background: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu {
   border-color: #ffffff;
@@ -470,7 +470,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   color: #212121;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu i {
-  color: #42a5f5;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu li li i {
   color: #757575;
@@ -482,7 +482,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   border-color: #ffffff;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu > li a:hover {
-  color: #42a5f5;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu > li.open > a,
 .sidebar.sidebar-skin-material-blue .sidebar-menu > li > a:hover,
@@ -496,13 +496,13 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   color: #ebebeb;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu li.active > a {
-  color: #2196f3;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu li.active > a i {
-  color: #2196f3;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu.sm-active-item-bg li.active > a {
-  background: #3094e4;
+  background: #FF5454;
   color: #ffffff;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu.sm-active-item-bg li.active > a i {
@@ -516,7 +516,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   font-size: 80%;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu.sm-icons-block li.active > a i {
-  background: #1b80d0;
+  background: #FF5454;
   color: #ffffff;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-menu li.open > ul {
@@ -547,7 +547,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   background: #fcfcfc;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-feed li:hover .media-object i {
-  color: #2196f3;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .sidebar-feed li .media-body a {
   color: #ffffff;
@@ -569,15 +569,15 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
   background: #f2f2f2;
 }
 .sidebar.sidebar-skin-material-blue .slider .slider-handle {
-  color: #2196f3;
+  color: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .datepicker table thead tr {
-  background: #3094e4 !important;
+  background: #FF5454 !important;
 }
 .sidebar.sidebar-skin-material-blue .datepicker table thead tr th.datepicker-switch:hover,
 .sidebar.sidebar-skin-material-blue .datepicker table thead tr th.next:hover,
 .sidebar.sidebar-skin-material-blue .datepicker table thead tr th.prev:hover {
-  background: #3094e4;
+  background: #FF5454;
 }
 .sidebar.sidebar-skin-material-blue .datepicker table tr td.day,
 .sidebar.sidebar-skin-material-blue .datepicker table tr td .month,
@@ -592,7 +592,7 @@ fieldset[disabled] .sidebar.sidebar-skin-material-blue .btn-default.active {
 .sidebar.sidebar-skin-material-blue .datepicker table tr td.day.active,
 .sidebar.sidebar-skin-material-blue .datepicker table tr td .month.active,
 .sidebar.sidebar-skin-material-blue .datepicker table tr td .year.active {
-  background: #3094e4 !important;
+  background: #FF5454 !important;
   color: #ffffff;
 }
 .sidebar.sidebar-skin-material-blue .datepicker table tr td.day:hover,

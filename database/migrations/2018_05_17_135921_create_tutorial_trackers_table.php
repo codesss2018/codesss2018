@@ -17,6 +17,7 @@ class CreateTutorialTrackersTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('tutorial_id');
+            $table->boolean('is_completed')->default(false);
             $table->timestamps();
         });
     }

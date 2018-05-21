@@ -17,6 +17,7 @@ class CreateTutorialsTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('course_id');
             $table->unsignedSmallInteger('structure_id');
+            $table->unsignedSmallInteger('order');
             $table->text('intro_txt');
             $table->string('video');
             $table->json('resources');

@@ -42,4 +42,12 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany('App\Comment', 'user_id');
     }
+
+    public function course_trackers(){
+        return $this->hasMany('App\CourseTracker', 'user_id');
+    }
+
+    public function certificate_trackers(){
+        return $this->hasMany('App\CertificateTracker', 'certificate_id');
+    }
 }

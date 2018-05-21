@@ -8,7 +8,7 @@ class TutorialController extends Controller
 {
     //
     public function index(Request $request, $sessid){
-        return $request;
+        return view('account.tutorial');
     }
 
     public function create(Request $request, $sessid, $tutorialid){

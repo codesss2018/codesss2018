@@ -23,4 +23,12 @@ class Course extends Model
     public function comments(){
         return $this->hasMany('App\Comment', 'course_id');
     }
+
+    public function course_trackers(){
+        return $this->hasMany('App\CourseTracker', 'course_id');
+    }
+
+    public function certificate(){
+        return $this->belongsTo('App\Certificate', 'certificate_id');
+    }
 }

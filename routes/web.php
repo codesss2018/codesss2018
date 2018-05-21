@@ -43,26 +43,41 @@ Route::view('/help', 'help',['page'=>'help'])->name('help');
 Auth::routes();
 
 Route::get('/account', 'HomeController@index')->name('account');
+Route::get('/logout', 'HomeController@logout')->name('logout');
 Route::get('/courses/show','CourseController@show');
 Route::get('/courses/show/all','CourseController@showAll');
 Route::get('/course/show/{courseid}','CourseController@getShow');
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','ensurelevel'])->group(function () {
     Route::prefix('/account')->group(function () {
-        Route::get('session/{sessid}','CodeSessionController@index');
+        Route::get('profile','UserController@profileEdit')->name('private-profile');
+        Route::get('courses','CourseController@my')->name('my-courses');
+        Route::get('define/course/{courseid?}','CourseController@dashboardEditor')->name('dashboard-editor');
+        Route::get('session/{sessid}','CodeSessionController@index')->name('session');
+
+        //
+        Route::get('comment/{commentid}','CommentController@threadFace')->name('face-thread-comments');
+        Route::get('comments/{courseid}','CommentController@courseFace')->name('face-course-comments');
+        Route::get('course/{courseid}','CourseController@detailFace')->name('face-course');
+
         Route::prefix('session/{sessid}')->group(function () {
-            Route::get('courses','CourseController@index');
+
+            Route::get('define/course/{courseid?}','CourseController@appEditor')->name('app-editor');
+            Route::get('courses/all','CourseController@index')->name('all-courses');
+            Route::get('courses/my','CourseController@mySession')->name('session-courses');
             Route::post('course/create','CourseController@create');
             Route::post('course/edit/{courseid}','CourseController@update');
             Route::post('course/delete/{courseid}','CourseController@delete');
-            Route::get('course/{courseid}','CourseController@get');
-            Route::get('comments','CommentController@index');
+            Route::get('course/{courseid}','CourseController@detail')->name('course');
+            Route::get('comments','CommentController@index')->name('comments');
             Route::prefix('course/{courseid}')->group(function (){
-                Route::get('comment/{commentid}','CommentController@get');
+                Route::get('comments','CommentController@course')->name('course-comments');
+                Route::get('comment/{commentid}','CommentController@thread')->name('thread-comments');
                 Route::post('comment/create','CommentController@create');
                 Route::post('comment/delete/{commentid}','CommentController@delete');
                 Route::get('quiz/{quizid}','QuizController@get');
                 Route::post('quiz/create/{quizid}','QuizController@create');
                 Route::post('quiz/delete/{quizid}','QuizController@delete');
+                Route::get('tutorial','TutorialController@index')->name('tutorial');
                 Route::get('tutorial/{tutorialid}','TutorialController@get');
                 Route::post('tutorial/create','TutorialController@create');
                 Route::post('tutorial/edit/{tutorialid}','TutorialController@update');
