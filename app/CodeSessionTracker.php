@@ -8,6 +8,8 @@ class CodeSessionTracker extends Model
 {
     //
 
+    protected $fillable = ['session_id','user_id']; 
+
     public function user(){
         return $this->belongsTo('App\User', 'user_id');
     }

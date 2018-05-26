@@ -49,10 +49,12 @@ Route::get('/courses/show/all','CourseController@showAll');
 Route::get('/course/show/{courseid}','CourseController@getShow');
 Route::middleware(['auth','ensurelevel'])->group(function () {
     Route::prefix('/account')->group(function () {
+        Route::get('switch/{mode}','HomeController@mode')->name('switch-mode');
         Route::get('profile','UserController@profileEdit')->name('private-profile');
         Route::get('courses','CourseController@my')->name('my-courses');
         Route::get('define/course/{courseid?}','CourseController@dashboardEditor')->name('dashboard-editor');
         Route::get('session/{sessid}','CodeSessionController@index')->name('session');
+        Route::get('session/join/{sessid}','CodeSessionController@join')->name('session-join');
 
         //
         Route::get('comment/{commentid}','CommentController@threadFace')->name('face-thread-comments');

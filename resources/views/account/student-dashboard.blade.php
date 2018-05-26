@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-9">
                     @forelse ($activecodesession as $key => $value)
-                        @if ($isusercurrentsession)
+                        @if (!$isusercurrentsession)
                             <div class="panel panel-default">
                                 <div class="media v-middle">
                                     <div class="media-left">
@@ -18,7 +18,7 @@
                                     The current session ends on <span class="text-body-2 text-red-000">{{$value->end_date->format('jS F Y') }}</span> and you are not part, click to ...
                                     </div>
                                     <div class="media-right media-padding">
-                                        <a class="btn btn-white paper-shadow relative" data-z="0.5" data-hover-z="1" data-animated href="{{ route('session',['sessid'=>$value->id]) }}">Join</a>
+                                        <a class="btn btn-white paper-shadow relative" data-z="0.5" data-hover-z="1" data-animated href="{{ route('session-join',['sessid'=>$value->id]) }}">Join</a>
                                     </div>
                                 </div>
                             </div>

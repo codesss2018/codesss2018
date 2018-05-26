@@ -50,4 +50,8 @@ class User extends Authenticatable
     public function certificate_trackers(){
         return $this->hasMany('App\CertificateTracker', 'certificate_id');
     }
+
+    public function sub_comments(){
+        return $this->hasMany('App\SubComment', 'comment_id');
+    }
 }

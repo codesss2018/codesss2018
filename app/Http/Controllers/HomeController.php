@@ -68,6 +68,16 @@ class HomeController extends Controller
         return $account;
     }
 
+    public function mode(Request $request, $mode){
+        $user = $request->user();
+        if ($user->type >= (int)$mode) {
+            $request->session()->put('user_mode',$mode);
+        }
+
+        return redirect()->route('account');
+
+    }
+
     public function logout(){
         Auth::logout();
         return redirect()->route('home',['page'=>'home']);

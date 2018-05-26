@@ -9,11 +9,33 @@ class CommentController extends Controller
     //
 
     public function index(Request $request, $sessid){
-        return view('account.forum');
+        $user = $request->user();
+        $categories = \App\CourseTracker::where('user_id',$user->id)
+                    ->with('course')
+                    ->get()
+                    ->pluck('course')
+                    ->where('session_id',$sessid);
+        $categories = $categories->each(function ($item, $key) {
+            return $item->load('comments');
+        });
+        $data = compact('user','sessid','categories');
+        return view('account.forum',$data);
     }
 
     public function course(Request $request, $sessid, $courseid){
-        return view('account.forum-course');
+        $user = $request->user();
+        $course = \App\Course::find($courseid);
+        $categories = \App\CourseTracker::where('user_id',$user->id)
+                    ->with('course')
+                    ->get()
+                    ->pluck('course')
+                    ->where('session_id',(int)$sessid);
+        $comments = \App\Comment::where('course_id', (int)$courseid)
+        ->with('user')
+        ->get();
+        $data = compact('user','course','comments','sessid','categories');
+        // return $data;
+        return view('account.forum-course',$data);
     }
 
     public function courseFace(Request $request, $courseid){

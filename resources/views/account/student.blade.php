@@ -6,7 +6,7 @@
                 <a href="#">
                     <img src="{{ asset('images/people/110/guy-6.jpg') }}" alt="people" class="img-circle width-80" />
                 </a>
-                <h4 class="text-display-1 margin-none">Student Name</h4>
+                <h4 class="text-display-1 margin-none">{{$user->name}}</h4>
             </div>
         </div>
         <ul class="sidebar-menu">

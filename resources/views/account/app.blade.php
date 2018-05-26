@@ -49,7 +49,15 @@
     <!-- Wrapper required for sidebar transitions -->
     <div class="st-container">
         <!-- Fixed navbar -->
-        @include('account/instructor')
+        @switch(Session::get('user_mode'))
+            @case(1)
+                @include('account/student')
+            @break
+            @case(2)
+                @include('account/instructor')
+            @break
+        @endswitch
+
         <!-- sidebar effects OUTSIDE of st-pusher: -->
         <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
         <!-- content push wrapper -->

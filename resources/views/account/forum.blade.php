@@ -14,19 +14,23 @@
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-lg-9">
-                                <div class="panel panel-default paper-shadow" data-z="0.5">
+
+
+                                @forelse ($categories as $key => $value)
+                                    <div class="panel panel-default paper-shadow" data-z="0.5">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <div class="media v-middle">
-                                                <div class="media-body">
-                                                    <h4 class="text-headline margin-none">General</h4>
-                                                    <p class="text-subhead text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, illo.</p>
-                                                </div>
-                                                <div class="media-right">
-                                                    <a href="#" class="btn btn-white btn-flat"><i class="fa fa-fw fa-plus"></i> New Topic</a>
-                                                </div>
+                                    <li class="list-group-item">
+                                        <div class="media v-middle">
+                                            <div class="media-body">
+                                                <h4 class="text-headline margin-none">{{$value->title}}</h4>
+                                                <p class="text-subhead text-light">Feel free to comment and share ideas ...</p>
                                             </div>
-                                        </li>
+                                            <div class="media-right">
+                                                <a href="#" class="btn btn-white btn-flat"><i class="fa fa-fw fa-plus"></i> New Topic</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    @forelse ($value->comments as $key => $comment)
                                         <li class="list-group-item media v-middle">
                                             <div class="media-left">
                                                 <div class="icon-block half img-circle bg-grey-300">
@@ -35,61 +39,28 @@
                                             </div>
                                             <div class="media-body">
                                                 <h4 class="text-subhead margin-none">
-                                                    <a href="{{ route('thread-comments',['courseid'=>1,'sessid'=>1,'commentid'=>1]) }}" class="link-text-color">Am I learning the right way?</a>
+                                                    <a href="{{ route('thread-comments',['courseid'=>$value->id,'sessid'=>$sessid,'commentid'=>$comment->id]) }}" class="link-text-color">I think this is the right way?</a>
                                                 </h4>
                                                 <div class="text-light text-caption">
                                                     posted by
                                                     <a href="#">
-                                                        <img src="{{ asset('images/people/110/guy-6.jpg') }}" alt="person" class="img-circle width-20" /> Adrian Demian</a> &nbsp; | <i class="fa fa-clock-o fa-fw"></i> 5 mins
-                                                </div>
-                                            </div>
-                                            <div class="media-right">
-                                                <a href="" class="btn btn-white text-light"><i class="fa fa-comments fa-fw"></i> 16</a>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item media v-middle">
-                                            <div class="media-left">
-                                                <div class="icon-block half img-circle bg-grey-300">
-                                                    <i class="fa fa-file-text text-white"></i>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="text-subhead margin-none">
-                                                    <a href="{{ route('thread-comments',['courseid'=>1,'sessid'=>1,'commentid'=>1]) }}" class="link-text-color">Can someone help me? I need a design advice</a>
-                                                </h4>
-                                                <div class="text-light text-caption">
-                                                    posted by
-                                                    <a href="#">
-                                                        <img src="{{ asset('images/people/110/woman-6.jpg') }}" alt="person" class="img-circle width-20" /> Jennifer Hudson</a> &nbsp; | <i class="fa fa-clock-o fa-fw"></i> 5 mins
-                                                </div>
-                                            </div>
-                                            <div class="media-right">
-                                                <a href="" class="btn btn-white text-light"><i class="fa fa-comments fa-fw"></i> 15</a>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item media v-middle">
-                                            <div class="media-left">
-                                                <div class="icon-block half img-circle bg-grey-300">
-                                                    <i class="fa fa-file-text text-white"></i>
-                                                </div>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="text-subhead margin-none">
-                                                    <a href="{{ route('thread-comments',['courseid'=>1,'sessid'=>1,'commentid'=>1]) }}" class="link-text-color">I think this is the right way?</a>
-                                                </h4>
-                                                <div class="text-light text-caption">
-                                                    posted by
-                                                    <a href="">
                                                         <img src="{{ asset('images/people/110/woman-4.jpg') }}" alt="person" class="img-circle width-20" /> Michelle Gustav</a> &nbsp; | <i class="fa fa-clock-o fa-fw"></i> 5 mins
                                                 </div>
                                             </div>
                                             <div class="media-right">
-                                                <a href="" class="btn btn-white text-light"><i class="fa fa-comments fa-fw"></i> 11</a>
+                                                <a href="#" class="btn btn-white text-light"><i class="fa fa-comments fa-fw"></i> 11</a>
                                             </div>
                                         </li>
-                                    </ul>
+                                    @empty
+
+                                    @endforelse
+                                </ul>
                                 </div>
                                 <br/>
+                            @empty
+
+                            @endforelse
+
                             </div>
                             <div class="col-md-4 col-lg-3">
                                 <div class="panel panel-default">
@@ -107,11 +78,16 @@
                                     </div>
                                     <ul class="list-group list-group-menu">
                                         <li class="list-group-item active">
-                                            <a href="{{ route('comments',['sessid'=>1]) }}"><i class="fa fa-chevron-right fa-fw"></i> All</a>
+                                            <a href="{{ route('comments',['sessid'=>$sessid]) }}"><i class="fa fa-chevron-right fa-fw"></i> All</a>
                                         </li>
-                                        <li class="list-group-item">
-                                            <a href="{{ route('course-comments',['courseid'=>1,'sessid'=>1]) }}"><i class="fa fa-chevron-right fa-fw"></i> General</a>
-                                        </li>
+                                        @forelse ($categories as $key => $value)
+                                            <li class="list-group-item">
+                                                <a href="{{ route('course-comments',['courseid'=>$value->id,'sessid'=>$sessid]) }}"><i class="fa fa-chevron-right fa-fw"></i> {{$value->title}}</a>
+                                            </li>
+                                        @empty
+
+                                        @endforelse
+
                                     </ul>
                                 </div>
                             </div>

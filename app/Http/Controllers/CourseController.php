@@ -8,19 +8,54 @@ class CourseController extends Controller
 {
     //
     public function index(Request $request){
+
         return view('account.course-list');
     }
 
     public function mySession(Request $request, $sessid){
-        return view('account.session-course-list');
+        //get user
+        $user = $request->user();
+        $usercourses = $user->course_trackers()
+                        ->with('course')
+                        ->get()
+                        ->pluck('course')
+                        ->where('session_id',(int)$sessid);
+        $activepage = 'course';
+        $account = compact('user',
+                            'usercourses',
+                            'activepage',
+                            'sessid'
+                        );
+        return view('account.session-course-list',$account);
     }
 
     public function my(Request $request){
-        return view('account.my-course-list');
+        //get user
+        $user = $request->user();
+        $usercourses = $user->course_trackers()
+                        ->with('course')
+                        ->get()
+                        ->pluck('course');
+        $activepage = 'course';
+        $account = compact('user',
+                            'usercourses',
+                            'activepage'
+                        );
+        return view('account.my-course-list',$account);
     }
 
     public function dashboardEditor(Request $request){
-        return view('account.course-dashboard-editor');
+        $user = $request->user();
+        $usercourses = $user->course_trackers()
+                        ->with('course')
+                        ->get()
+                        ->pluck('course');
+        $activepage = 'course';
+        $account = compact('user',
+                            'usercourses',
+                            'activepage'
+                        );
+        return view('account.course-dashboard-editor',$account);
     }
 
     public function appEditor(Request $request){
