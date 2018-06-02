@@ -16,6 +16,7 @@ class CreateQuizTrackersTable extends Migration
         Schema::create('quiz_trackers', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('session_id');
             $table->unsignedBigInteger('quiz_id');
             $table->json('progress');
             $table->boolean('is_completed')->default(false);

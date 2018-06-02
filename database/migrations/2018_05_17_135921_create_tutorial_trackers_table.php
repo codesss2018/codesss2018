@@ -16,6 +16,7 @@ class CreateTutorialTrackersTable extends Migration
         Schema::create('tutorial_trackers', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('session_id');
             $table->unsignedBigInteger('tutorial_id');
             $table->boolean('is_completed')->default(false);
             $table->timestamps();

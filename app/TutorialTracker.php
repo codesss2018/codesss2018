@@ -14,4 +14,8 @@ class TutorialTracker extends Model
     public function tutorial(){
         return $this->belongsTo('App\Tutorial', 'tutorial_id');
     }
+
+    public function code_session(){
+        return $this->belongsTo('App\CodeSession', 'session_id');
+    }
 }

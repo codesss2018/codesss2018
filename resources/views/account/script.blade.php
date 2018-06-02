@@ -30,21 +30,7 @@ var config = {
 <script src="{{ asset('js/vendor-player.min.js') }}"></script>
 <script src="{{ asset('js/vendor-charts-flot.min.js') }}"></script>
 <script src="{{ asset('js/vendor-nestable.min.js') }}"></script>
-{{-- <!-- <script src="{{ asset('js/vendor-angular.min.js') }}"></script> --> --}}
-<!-- Compressed Vendor Scripts Bundle
-Includes all of the 3rd party JavaScript libraries above.
-The bundle was generated using modern frontend development tools that are provided with the package
-To learn more about the development process, please refer to the documentation.
-Do not use it simultaneously with the separate bundles above. -->
-<!-- <script src="js/vendor-bundle-all.min.js"></script> -->
-<!-- Compressed App Scripts Bundle
-Includes Custom Application JavaScript used for the current theme/module;
-Do not use it simultaneously with the standalone modules below. -->
-<!-- <script src="js/module-bundle-main.min.js"></script> -->
-<!-- Standalone Modules
-As a convenience, we provide the entire UI framework broke down in separate modules
-Some of the standalone modules may have not been used with the current theme/module
-but ALL the modules are 100% compatible -->
+<script type="text/javascript" src="{{ asset('js/select2.min.js') }}"></script>
 <script src="{{ asset('js/module-essentials.min.js') }}"></script>
 <script src="{{ asset('js/module-material.min.js') }}"></script>
 <script src="{{ asset('js/module-layout.min.js') }}"></script>
@@ -60,3 +46,4 @@ but ALL the modules are 100% compatible -->
     module-bundle-main.js already includes theme-core.js so this should be loaded
     ONLY when using the standalone modules; -->
 <script src="{{ asset('js/theme-core.min.js') }}"></script>
+<script src="{{ asset('js/sbk.js') }}"></script>

@@ -53,7 +53,9 @@ Route::middleware(['auth','ensurelevel'])->group(function () {
         Route::get('profile','UserController@profileEdit')->name('private-profile');
         Route::get('courses','CourseController@my')->name('my-courses');
         Route::get('define/course/{courseid?}','CourseController@dashboardEditor')->name('dashboard-editor');
+        Route::post('session/create','CodeSessionController@create');
         Route::get('session/{sessid}','CodeSessionController@index')->name('session');
+        Route::get('session/{sessid}/edit','CodeSessionController@edit')->name('session-edit');
         Route::get('session/join/{sessid}','CodeSessionController@join')->name('session-join');
 
         //
@@ -62,7 +64,8 @@ Route::middleware(['auth','ensurelevel'])->group(function () {
         Route::get('course/{courseid}','CourseController@detailFace')->name('face-course');
 
         Route::prefix('session/{sessid}')->group(function () {
-
+            Route::post('joins','CodeSessionTrackerController@intructorJoins')->name('instructor-join');
+            Route::post('removes','CodeSessionTrackerController@intructorRemoves')->name('instructor-remove');
             Route::get('define/course/{courseid?}','CourseController@appEditor')->name('app-editor');
             Route::get('courses/all','CourseController@index')->name('all-courses');
             Route::get('courses/my','CourseController@mySession')->name('session-courses');

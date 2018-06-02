@@ -58,4 +58,26 @@ class CodeSessionController extends Controller
         }
         return redirect()->route('account');
     }
+
+    public function create(Request $request){
+        // dd($request);
+        \App\CodeSession::create($request->all());
+        return redirect()->route('account');
+    }
+
+    public function edit(Request $request, $sessid){
+        if ($request->user()->type === 3 and (int)$request->session()->get('user_mode',1) === 3) {
+            $user = $request->user();
+            $activepage = '';
+            $sess = \App\CodeSession::find($sessid);
+            $structors = \App\CodeSessionTracker::where('session_id',$sessid)->select('user_id');
+            $sesinstructors = \App\CodeSessionTracker::where('session_id',$sessid)->with('user')->get()->pluck('user')->whereIn('type',[2,3]);
+            $instructors = \App\User::whereIn('type',[2,3])->whereNotIn('id',$structors)->get();
+            $data = compact('sess','user','activepage','instructors','sesinstructors');
+            // return $data;
+            return view('account.session-edit',$data);
+        }else{
+            return redirect()->route('account');
+        }
+    }
 }

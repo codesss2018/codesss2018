@@ -13,6 +13,8 @@ class CodeSession extends Model
         'start_date',
         'end_date'
     ];
+
+    protected $guarded = [];
     //
     public function courses(){
         return $this->hasMany('App\Course','course_id');
@@ -20,5 +22,17 @@ class CodeSession extends Model
 
     public function code_session_trackers(){
         return $this->hasMany('App\CodeSessionTracker', 'session_id');
+    }
+
+    public function tutorial_trackers(){
+        return $this->hasMany('App\TutorialTracker', 'session_id');
+    }
+
+    public function course_trackers(){
+        return $this->hasMany('App\CourseTracker', 'session_id');
+    }
+
+    public function quiz_trackers(){
+        return $this->hasMany('AppQuizTracker', 'session_id');
     }
 }

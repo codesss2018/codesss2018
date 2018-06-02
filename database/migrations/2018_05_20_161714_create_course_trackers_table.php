@@ -16,6 +16,7 @@ class CreateCourseTrackersTable extends Migration
         Schema::create('course_trackers', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('session_id');
             $table->unsignedBigInteger('course_id');
             $table->json('progress');
             $table->boolean('is_completed')->default(false);

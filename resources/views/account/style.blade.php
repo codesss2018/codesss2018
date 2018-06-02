@@ -27,6 +27,7 @@ but ALL modules are 100% compatible -->
 <link href="{{ asset('css/module-colors-background.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/module-colors-buttons.min.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/module-colors-text.min.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('css/select2.min.css') }}" type="text/css"/>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!-- If you don't need support for Internet Explorer <= 8 you can safely remove these -->
