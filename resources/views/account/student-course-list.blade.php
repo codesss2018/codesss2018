@@ -40,17 +40,9 @@
                                 </div>
                             </div>
                         @empty
-                            No registered for yet, what are you waiting for ...
+                            No registered for any courses yet, what are you waiting for, join the <a href="{{ route('account') }}" class="text-red-000">current session</a> and start learning ...
                         @endforelse
-                    </div>
-
-                    <ul class="pagination margin-top-none">
-                        <li class="disabled"><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                    </div><br/>
                     <br/>
                 </div>
                 <div class="col-md-3">

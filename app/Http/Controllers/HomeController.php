@@ -82,4 +82,16 @@ class HomeController extends Controller
         Auth::logout();
         return redirect()->route('home',['page'=>'home']);
     }
+
+    public function userM(Request $request){
+        if ($request->user()->type === 3 and (int)$request->session()->get('user_mode',1) === 3) {
+            $user = $request->user();
+            $activepage = 'userM';
+            $users = \App\User::orderBy('type','desc')->whereIn('type',[1,2])->get();
+            $data = compact('activepage','users','user');
+            return view('account/user-management',$data);
+        }else{
+            return redirect()->route('account');
+        }
+    }
 }

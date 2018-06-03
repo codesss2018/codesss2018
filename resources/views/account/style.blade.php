@@ -1,5 +1,6 @@
 
 <link href="{{ asset('css/vendor.min.css') }}" rel="stylesheet">
+
 <!-- Compressed Theme BUNDLE
 Note: The bundle includes all the custom styling required for the current theme, however
 it was tweaked for the current theme/module and does NOT include ALL of the standalone modules;

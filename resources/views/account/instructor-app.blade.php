@@ -20,7 +20,7 @@
                                         @forelse ($usercourses as $key => $value)
                                             <li class="list-group-item media v-middle">
                                                 <div class="media-body">
-                                                    <a href="{{ route('face-course',['courseid'=>$value->id]) }}" class="text-subhead list-group-link">{{ $value->title }}</a>
+                                                    <a href="{{ route('app-editor',['courseid'=>$value->id,'sessid'=>$sessid]) }}" class="text-subhead list-group-link">{{ $value->title }}</a>
                                                 </div>
                                                 <div class="media-right">
                                                     <div class="progress progress-mini width-100 margin-none">
@@ -32,7 +32,7 @@
                                         @empty
                                             <li class="list-group-item media v-middle">
                                                 <div class="media-body">
-                                                    <a href="" class="text-subhead list-group-link">No courses registered yet, get started ...</a>
+                                                    <a href="" class="text-subhead list-group-link">You haven't created any course yet, you can only create courses within sessions that you've been registered for ...</a>
                                                 </div>
                                             </li>
                                         @endforelse

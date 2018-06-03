@@ -13,11 +13,19 @@ class CodeSessionController extends Controller
         $count = $user->code_session_trackers()->where('session_id',(int)$sessid)->count();
         $activecodesession = \App\CodeSession::orderBy('start_date','desc')->first();
         //get courses user has registered for within this session
-        $usercourses = $user->course_trackers()
-                        ->with('course')
-                        ->get()
-                        ->pluck('course')
-                        ->where('session_id',(int)$sessid);
+        if ((int)$request->session()->get('user_mode',1) === 1) {
+            $usercourses = $user->course_trackers()
+                            ->with('course')
+                            ->get()
+                            ->pluck('course')
+                            ->where('session_id',(int)$sessid);
+            $toEdit = false;
+        }else{
+            $usercourses = $user->courses()
+                            ->where('session_id',(int)$sessid)
+                            ->get();
+            $toEdit = true;
+        }
         // dd($usercourses);
         $userforum = \App\Comment::whereIn('course_id',$usercourses->pluck('id')
                     ->all())

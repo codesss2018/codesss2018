@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('code');
             $table->string('title');
             $table->string('description');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('session_id');
             $table->json('structure');
             $table->unsignedBigInteger('certificate_id');

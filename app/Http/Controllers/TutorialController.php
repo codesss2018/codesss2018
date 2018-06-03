@@ -8,7 +8,9 @@ class TutorialController extends Controller
 {
     //
     public function index(Request $request, $sessid){
-        return view('account.tutorial');
+        $user = $request->user();
+        $data = compact('user');
+        return view('account.tutorial',$data);
     }
 
     public function create(Request $request, $sessid, $tutorialid){

@@ -40,7 +40,13 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li @if($activepage=='dash')class="active" @endif><a href="{{ asset('account') }}"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
-                                <li @if($activepage=='course')class="active" @endif><a href="{{ route('my-courses') }}"><i class="fa fa-user"></i> My Courses</a></li>
+                                @switch(Session::get('user_mode'))
+                                    @case(3)
+                                        <li @if($activepage=='userM')class="active" @endif><a href="{{ route('user-management') }}"><i class="fa fa-users"></i> User Management</a></li>
+                                    @break
+                                    @default
+                                        <li @if($activepage=='course')class="active" @endif><a href="{{ route('my-courses') }}"><i class="fa fa-book"></i> My Courses</a></li>
+                                @endswitch
                                 <li @if($activepage=='prof')class="active" @endif><a href="{{ route('private-profile') }}"><i class="fa fa-user"></i> Profile</a></li>
                                 <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                             </ul>

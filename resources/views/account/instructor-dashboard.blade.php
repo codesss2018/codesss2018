@@ -25,14 +25,13 @@
                                 @empty
                                     <li class="list-group-item media v-middle">
                                         <div class="media-body">
-                                            <a href="" class="text-subhead list-group-link">No courses registered yet, get started ...</a>
+                                            <a href="" class="text-subhead list-group-link">You haven't created any course yet, you can only create courses within sessions that you've been registered for ...</a>
                                         </div>
                                     </li>
                                 @endforelse
                                 </ul>
                                 <div class="panel-footer text-right">
                                     <a href="{{ route('my-courses') }}" class="btn btn-white paper-shadow relative" data-z="0" data-hover-z="1" data-animated>View all</a>
-                                    <a href="{{ route('dashboard-editor') }}" class="btn btn-primary paper-shadow relative" data-z="0" data-hover-z="1" data-animated>CREATE COURSE <i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>

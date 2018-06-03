@@ -22,6 +22,7 @@ var config = {
 };
 </script>
 <!-- Separate Vendor Script Bundles -->
+
 <script src="{{ asset('js/vendor-core.min.js') }}"></script>
 <script src="{{ asset('js/vendor-countdown.min.js') }}"></script>
 <script src="{{ asset('js/vendor-tables.min.js') }}"></script>
@@ -30,7 +31,7 @@ var config = {
 <script src="{{ asset('js/vendor-player.min.js') }}"></script>
 <script src="{{ asset('js/vendor-charts-flot.min.js') }}"></script>
 <script src="{{ asset('js/vendor-nestable.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/select2.min.js') }}"></script>
+<script src="{{ asset('js/select2.min.js') }}"></script>
 <script src="{{ asset('js/module-essentials.min.js') }}"></script>
 <script src="{{ asset('js/module-material.min.js') }}"></script>
 <script src="{{ asset('js/module-layout.min.js') }}"></script>

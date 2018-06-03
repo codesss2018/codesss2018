@@ -8,6 +8,8 @@ class Course extends Model
 {
     //
 
+    protected $guarded = [];
+
     public function code_session(){
         return $this->belongsTo('App\CodeSession', 'course_id');
     }
@@ -30,5 +32,9 @@ class Course extends Model
 
     public function certificate(){
         return $this->belongsTo('App\Certificate', 'certificate_id');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id');
     }
 }

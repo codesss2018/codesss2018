@@ -27,28 +27,10 @@
                            </div>
                        </div>
                    @empty
-                       You haven't created any courses yet, what are you waiting for.
+                       You haven't created any course yet, you can only create courses within sessions that you've been registered for ...
                    @endforelse
-                       <div class="item col-xs-12 col-sm-6 col-lg-4">
-                           <div class="panel panel-default paper-shadow" data-z="0.5">
-                               <div class="cover overlay cover-image-full hover">
-                                   <span class="img icon-block height-150 bg-grey-200"></span>
-                                   <a href="{{ route('dashboard-editor') }}" class="padding-none overlay overlay-full icon-block bg-grey-200">
-                                       <span class="v-center"><i class="fa fa-plus text-grey-600"></i></span>
-                                   </a>
-                               </div>
-                           </div>
-                       </div>
                    </div>
-                   <ul class="pagination margin-top-none">
-                       <li class="disabled"><a href="#">&laquo;</a></li>
-                       <li class="active"><a href="#">1</a></li>
-                       <li><a href="#">2</a></li>
-                       <li><a href="#">3</a></li>
-                       <li><a href="#">&raquo;</a></li>
-                   </ul>
-                   <br/>
-                   <br/>
+                   
                </div>
                <div class="col-md-3">
                    <div class="panel panel-default" data-toggle="panel-collapse" data-open="true">

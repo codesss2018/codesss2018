@@ -49,6 +49,7 @@ Route::get('/courses/show/all','CourseController@showAll');
 Route::get('/course/show/{courseid}','CourseController@getShow');
 Route::middleware(['auth','ensurelevel'])->group(function () {
     Route::prefix('/account')->group(function () {
+        Route::get('users','HomeController@userM')->name('user-management');
         Route::get('switch/{mode}','HomeController@mode')->name('switch-mode');
         Route::get('profile','UserController@profileEdit')->name('private-profile');
         Route::get('courses','CourseController@my')->name('my-courses');
@@ -63,15 +64,17 @@ Route::middleware(['auth','ensurelevel'])->group(function () {
         Route::get('comments/{courseid}','CommentController@courseFace')->name('face-course-comments');
         Route::get('course/{courseid}','CourseController@detailFace')->name('face-course');
 
+        Route::post('course/create','CourseController@create');
+        Route::post('course/edit/{courseid}','CourseController@update');
+        Route::post('course/delete/{courseid}','CourseController@delete');
+        
         Route::prefix('session/{sessid}')->group(function () {
             Route::post('joins','CodeSessionTrackerController@intructorJoins')->name('instructor-join');
             Route::post('removes','CodeSessionTrackerController@intructorRemoves')->name('instructor-remove');
             Route::get('define/course/{courseid?}','CourseController@appEditor')->name('app-editor');
             Route::get('courses/all','CourseController@index')->name('all-courses');
             Route::get('courses/my','CourseController@mySession')->name('session-courses');
-            Route::post('course/create','CourseController@create');
-            Route::post('course/edit/{courseid}','CourseController@update');
-            Route::post('course/delete/{courseid}','CourseController@delete');
+
             Route::get('course/{courseid}','CourseController@detail')->name('course');
             Route::get('comments','CommentController@index')->name('comments');
             Route::prefix('course/{courseid}')->group(function (){
